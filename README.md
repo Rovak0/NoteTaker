@@ -1,0 +1,2 @@
+# NoteTaker
+It stores notes
