@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 //port will get changed at some point
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
@@ -14,6 +14,7 @@ app.use(express.urlencoded({extended : true}));
 app.use(express.static('public'));
 
 //this is basic show file stuff
+//the holder.js manages the routing to notes
 app.use('/api', api);
 
 app.get('/', (req, res) => {
